@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+    --main-bg-color: #333333;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'STIX Two Text', serif;
+
+}
+
+header{
+    background: var(--main-bg-color); 
+    font-family: 'Lato', sans-serif;
+}
+
+nav{
+    display: flex;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 80px;
+    padding: 0 25px;
+    box-sizing: content-box;
+}
+
+.logo img:hover{
+    width: 85px;
+    cursor: pointer;
+}
+
+nav ul{
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none; 
+    padding: 0 23px;
+    justify-content: flex-end;
+}
+
+nav ul li a{
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{ 
+    color: white;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.container{
+    min-height: calc(100vh - 58px - 12vh);
+}
+
+.card{
+    max-width: 91vw;
+    margin: 37px auto;
+}
+
+.table{
+    margin-top: 50px;
+}
+th, td {
+    border: 1px solid white;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+
+}
+footer{
+    height: 12vh;
+    background-color: var(--main-bg-color); 
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
