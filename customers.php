@@ -30,6 +30,7 @@
         <div class="container">
             <?php
             include "connection.php";
+            // Fetching the records 
             $sql = "SELECT * FROM `customers`";
             $result = mysqli_query($conn, $sql);
             echo "<table class='table table-hover table-dark'>";
@@ -47,7 +48,7 @@
                 echo "<th scope='row'>" . $row['sno'] . "</th>";
                 echo "<td>" . $row['name'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['balance'] . "</td>";
+                echo "<td>" ."&#8377;". $row['balance'] . "</td>";
                 echo "</tr>";
             }
             echo "</tbody>";

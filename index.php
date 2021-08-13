@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking System</title>
-
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +16,7 @@
             <div class="logo">
                 <a href="transfer.php"><img src="images/Bank.png" alt="logo"></a>
             </div>
-            <ul>
+            <ul class = "navbar-toggle">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="customers.php">Customers</a></li>
                 <li><a href="transfer.php">Transfer</a></li>
@@ -59,5 +58,4 @@
         <p>Copyright &copy; 2021 All rights reserved | Banking System</p>
     </footer>
 </body>
-
 </html>

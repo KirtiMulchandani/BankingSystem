@@ -65,7 +65,11 @@ nav ul li a:hover{
 .container{
     min-height: calc(100vh - 58px - 12vh);
 }
-
+.container h2{
+    margin-top: 10px;
+    text-align: center;
+    color: var(--main-bg-color);
+}
 .card{
     max-width: 91vw;
     margin: 37px auto;
@@ -85,5 +89,32 @@ footer{
     height: 12vh;
     background-color: var(--main-bg-color); 
     color: white;
-    font-family: 'Lato', sans-serif;
 }
+
+@media screen and (max-width:510px) {
+    nav{
+        flex-direction: column;
+    }
+    .logo{
+        justify-content: space-around;
+        margin: 10px 0;
+    }
+    .logo img{
+        width: 110px;
+        padding: 0 25px;
+    }
+    nav ul{
+        height: 34px;
+        justify-content: center;
+    }
+    nav ul li a{
+        font-size: 3vh;
+    }
+    nav ul li{
+        padding: 0px 15px;
+    }
+    footer{
+        font-size: 2vh;
+    }
+}
+

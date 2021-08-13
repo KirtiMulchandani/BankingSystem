@@ -47,7 +47,7 @@
                 echo "<th scope='row'>" . $i . "</th>";
                 echo "<td>" . $row['sender'] . "</td>";
                 echo "<td>" . $row['receiver'] . "</td>";
-                echo "<td>" . $row['amount'] . "</td>";
+                echo "<td>" ."&#8377;". $row['amount'] . "</td>";
                 echo "<td>" . $row['date'] . "</td>";
                 echo "</tr>";
                 $i += 1;

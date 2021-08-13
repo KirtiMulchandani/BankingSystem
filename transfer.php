@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </header>
     <main>
         <div class="container">
-            <h1 align="center">Transfer Money</h1>
+            <h2>Transfer Money</h2>
             <form action="transfer.php" method="post">To
                 <select name="receivername" id="receievername" class="form-select" aria-label="Default select example">
                     <option disabled selected>Select Name</option>
@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     include "connection.php";
                     $records = mysqli_query($conn, "SELECT * From customers");
                     while ($data = mysqli_fetch_array($records)) {
-                        echo "<option value='" . $data['name'] . "'>" . $data['name'] . " (Balance:" . $data['balance'] . ")" . "</option>";
+                        echo "<option value='" . $data['name'] . "'>" . $data['name'] . " (Balance: &#8377;" . $data['balance'] . ")" . "</option>";
                     }
                     ?>
                 </select>
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     include "connection.php";
                     $records = mysqli_query($conn, "SELECT * From customers");
                     while ($data = mysqli_fetch_array($records)) {
-                        echo "<option value='" . $data['name'] . "'>" . $data['name'] . " (Balance:" . $data['balance'] . ")" . "</option>";
+                        echo "<option value='" . $data['name'] . "'>" . $data['name'] . " (Balance: &#8377;" . $data['balance'] . ")" . "</option>";
                     }
                     ?>
                 </select>
