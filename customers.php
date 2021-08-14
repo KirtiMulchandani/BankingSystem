@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/utils.css">
 </head>
-
 <body>
     <header>
+        <!-- Nav Bar -->
         <nav>
             <div class="logo">
                 <img src="images/Bank.png" alt="">
@@ -29,6 +29,7 @@
     <main>
         <div class="container">
             <?php
+            // creating connection with database
             include "connection.php";
             // Fetching the records 
             $sql = "SELECT * FROM `customers`";
@@ -48,7 +49,7 @@
                 echo "<th scope='row'>" . $row['sno'] . "</th>";
                 echo "<td>" . $row['name'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" ."&#8377;". $row['balance'] . "</td>";
+                echo "<td>" . "&#8377;" . $row['balance'] . "</td>";
                 echo "</tr>";
             }
             echo "</tbody>";
@@ -56,6 +57,7 @@
             ?>
         </div>
     </main>
+    <!-- Footer -->
     <footer class="flex-all-center">
         <p>Copyright &copy; 2021 All rights reserved | Banking System</p>
     </footer>

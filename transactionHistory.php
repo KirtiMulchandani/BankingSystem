@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+        <!-- Nav Bar -->
         <nav>
             <div class="logo">
                 <img src="images/Bank.png" alt="">
@@ -28,6 +29,7 @@
         <div class="container">
             <?php
             include "connection.php";
+            // creating connection with database
             $sql = "SELECT * FROM `transactionhistory`";
             $result = mysqli_query($conn, $sql);
             echo "<table class='table table-hover table-dark'>";
@@ -56,6 +58,7 @@
             ?>
         </div>
     </main>
+    <!-- Footer -->
     <footer class="flex-all-center">
         <p>Copyright &copy; 2021 All rights reserved | Banking System</p>
     </footer>

@@ -1,3 +1,4 @@
+/* To centralize the content vertically and horizontally */
 .flex-all-center{
     display: flex;
     justify-content: center;

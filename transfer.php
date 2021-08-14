@@ -1,8 +1,6 @@
 <?php
+// creating connection with database
 include "connection.php";
-if (isset($_GET['id'])) {
-    echo $_GET['id'];
-}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sendername = $_POST['sendername'];
     $receivername = $_POST['receivername'];
@@ -23,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     //check for whether the user has sufficient balance or not
     else if ($amount > $sql1['balance']) {
+        // Alert for Insufficient Balance
         echo '<script type="text/javascript">';
         echo ' alert("Insufficient Balance")';
         echo '</script>';
@@ -30,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //check for the amount should be non-zero
     else if ($amount == 0) {
-
         echo "<script type='text/javascript'>";
         echo "alert('Zero value cannot be transferred')";
         echo "</script>";
@@ -52,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $query = mysqli_query($conn, $sql);
 
+        // Alert for successful transaction
         if ($query) {
             echo "<script> alert('Transaction Successful');
                              window.location='transactionHistory.php';
@@ -65,7 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,9 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/utils.css">
 </head>
-
 <body>
     <header>
+        <!-- Nav Bar -->
         <nav>
             <div class="logo">
                 <img src="images/Bank.png" alt="logo" style="box-sizing: content-box;">
@@ -93,11 +91,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main>
         <div class="container">
             <h2>Transfer Money</h2>
+            <!-- Make transaction -->
             <form action="transfer.php" method="post">To
                 <select name="receivername" id="receievername" class="form-select" aria-label="Default select example">
                     <option disabled selected>Select Name</option>
                     <?php
+                    // creating connection with database
                     include "connection.php";
+                    // Fetching the available records
                     $records = mysqli_query($conn, "SELECT * From customers");
                     while ($data = mysqli_fetch_array($records)) {
                         echo "<option value='" . $data['name'] . "'>" . $data['name'] . " (Balance: &#8377;" . $data['balance'] . ")" . "</option>";
@@ -108,7 +109,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <select name="sendername" id="sendername" class="form-select" aria-label="Default select example">
                     <option disabled selected>Select Name</option>
                     <?php
+                    // creating connection with database
                     include "connection.php";
+                    // Fetching the available records
                     $records = mysqli_query($conn, "SELECT * From customers");
                     while ($data = mysqli_fetch_array($records)) {
                         echo "<option value='" . $data['name'] . "'>" . $data['name'] . " (Balance: &#8377;" . $data['balance'] . ")" . "</option>";
@@ -124,9 +127,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
         </div>
     </main>
+    <!-- Footer -->
     <footer class="flex-all-center">
         <p>Copyright &copy; 2021 All rights reserved | Banking System</p>
     </footer>
 </body>
-
 </html>

@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+        <!-- Nav Bar -->
         <nav>
             <div class="logo">
                 <a href="transfer.php"><img src="images/Bank.png" alt="logo"></a>
@@ -26,7 +27,9 @@
     </header>
     <main>
         <div class="container">
+            <!-- Cards -->
             <div class="card-group">
+                <!-- View all coustomers -->
                 <div class="card">
                     <img class="card-img-top" src="images/2.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -36,6 +39,7 @@
                     </div>
                 </div>
                 <div class="card ">
+                    <!-- Make transaction -->
                     <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <div class="card-body text-center">
@@ -44,6 +48,7 @@
                     </div>
                 </div>
                 <div class="card">
+                    <!-- Transaction History -->
                     <img class="card-img-top" src="images/3.jpg" alt="Card image cap">
                     <div class="card-body">
                         <div class="card-body text-center">
@@ -54,6 +59,7 @@
             </div>
         </div>
     </main>
+    <!-- Footer -->
     <footer class="flex-all-center">
         <p>Copyright &copy; 2021 All rights reserved | Banking System</p>
     </footer>
