@@ -16,7 +16,7 @@
             <div class="logo">
                 <a href="transfer.php"><img src="images/Bank.png" alt="logo"></a>
             </div>
-            <ul class = "navbar-toggle">
+            <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="customers.php">Customers</a></li>
                 <li><a href="transfer.php">Transfer</a></li>
