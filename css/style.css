@@ -74,6 +74,11 @@ nav ul li a:hover{
     text-align: center;
     color: var(--main-bg-color);
 }
+
+.container img{
+    height: 265px;
+}
+
 .card{
     max-width: 91vw;
     margin: 37px auto;
