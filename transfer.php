@@ -70,20 +70,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utils.css">
+    <link rel="icon" href="./images/Bank.png">
 </head>
 <body>
     <header>
         <!-- Nav Bar -->
         <nav>
             <div class="logo">
-                <img src="images/Bank.png" alt="logo" style="box-sizing: content-box;">
+                <img src="./images/Bank.png" alt="logo" style="box-sizing: content-box;">
             </div>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="customers.php">Customers</a></li>
-                <li><a href="transfer.php">Transfer</a></li>
+                <li><a href="./index.php">Home</a></li>
+                <li><a href="./customers.php">Customers</a></li>
+                <li><a href="./transfer.php">Transfer</a></li>
             </ul>
             </div>
         </nav>
@@ -92,12 +93,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container">
             <h2>Transfer Money</h2>
             <!-- Make transaction -->
-            <form action="transfer.php" method="post">To
+            <form action="./transfer.php" method="post">To
                 <select name="receivername" id="receievername" class="form-select" aria-label="Default select example">
                     <option disabled selected>Select Name</option>
                     <?php
                     // creating connection with database
-                    include "connection.php";
+                    include "./connection.php";
                     // Fetching the available records
                     $records = mysqli_query($conn, "SELECT * From customers");
                     while ($data = mysqli_fetch_array($records)) {

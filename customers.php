@@ -8,20 +8,21 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utils.css">
+    <link rel="icon" href="./images/Bank.png">
 </head>
 <body>
     <header>
         <!-- Nav Bar -->
         <nav>
             <div class="logo">
-                <img src="images/Bank.png" alt="">
+                <img src="./images/Bank.png" alt="">
             </div>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="customers.php">Customers</a></li>
-                <li><a href="transfer.php">Transfer</a></li>
+                <li><a href="./index.php">Home</a></li>
+                <li><a href="./customers.php">Customers</a></li>
+                <li><a href="./transfer.php">Transfer</a></li>
             </ul>
             </div>
         </nav>
@@ -30,7 +31,7 @@
         <div class="container">
             <?php
             // creating connection with database
-            include "connection.php";
+            include "./connection.php";
             // Fetching the records 
             $sql = "SELECT * FROM `customers`";
             $result = mysqli_query($conn, $sql);
