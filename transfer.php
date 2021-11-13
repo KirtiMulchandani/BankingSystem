@@ -1,6 +1,6 @@
 <?php
 // creating connection with database
-include "connection.php";
+include "./connection.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sendername = $_POST['sendername'];
     $receivername = $_POST['receivername'];
